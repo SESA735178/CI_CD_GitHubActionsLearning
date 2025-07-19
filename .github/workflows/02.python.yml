@@ -1,0 +1,18 @@
+name: Run Hello World from py script
+on: push
+
+jobs:
+  Run PY:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Run Python script
+        run: Python hellopython.py
