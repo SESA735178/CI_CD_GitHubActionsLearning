@@ -2,7 +2,7 @@ name: Run Hello World from py script
 on: push
 
 jobs:
-  Run_PY:
+  Initialize:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,5 +14,8 @@ jobs:
         with:
           python-version: "3.13"
 
+  Run_Script:
+    runs-on: ubuntu-latest
+    steps:
       - name: Run Python script
         run: python hellopython.py
