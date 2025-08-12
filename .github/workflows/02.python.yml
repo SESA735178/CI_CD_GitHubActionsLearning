@@ -18,5 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: Environment_Setup
     steps:
+      - name: Clone code
+        uses: actions/checkout@v3
+
       - name: Run Python script
         run: python hellopython.py
